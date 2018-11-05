@@ -194,9 +194,7 @@ class ViewController: UIViewController, MKMapViewDelegate, XMLParserDelegate {
             default : mPM10Cai = "오류"
         }
         
-        let ac = UIAlertController(title: vStation! + " 측정소", message: nil, preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "PM10 : " + vPM10!, style: .default, handler: nil))
-        ac.addAction((UIAlertAction(title: mPM10Cai, style: .default, handler: nil)))
+        let ac = UIAlertController(title: vStation! + " 측정소", message: "PM10 : " + vPM10! + "㎍/㎥ \n 상태 : " + mPM10Cai!, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "닫기", style: .cancel, handler: nil))
         self.present(ac, animated: true, completion: nil)
         
